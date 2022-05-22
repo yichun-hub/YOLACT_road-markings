@@ -32,4 +32,4 @@
     # provide a map from category_id -> index in class_names + 1 (the +1 is there because it's 1-indexed).
     # If not specified, this just assumes category ids start at 1 and increase sequentially.
     'label_map': {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7}
-})
+    })
