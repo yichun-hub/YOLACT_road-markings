@@ -20,6 +20,7 @@
   * modify train/ val images and annotations path
   * modify class names
   * modify label map to match the coco class ids
+
       dataset_base = Config({
     'name': 'My Dataset',
 
