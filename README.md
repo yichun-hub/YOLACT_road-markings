@@ -52,20 +52,22 @@
   * modify training parameter
   * num_epoch: max_iter// [(len(dataset) // batch_size)]
   * iterations per epoch: len(dataset) // batch_size
-    yolact_base_config = coco_base_config.copy({
-    'name': 'yolact_base',
+  ```python 
+  yolact_base_config = coco_base_config.copy({
+  'name': 'yolact_base',
 
-    # Dataset stuff
-    'dataset': dataset_base,
-    'num_classes': 7 + 1,
+  # Dataset stuff
+  'dataset': dataset_base,
+  'num_classes': 7 + 1,
 
-    # Image Size
-    'max_size': 700, 
+  # Image Size
+  'max_size': 700, 
     
-    # Training params
-    'lr_steps': (2800, 6000, 7000, 7500),
-    'max_iter': 35000,  ## num_epoch:max_iter// [(len(dataset) // batch_size)]  []:iterations
-    
+  # Training params
+  'lr_steps': (2800, 6000, 7000, 7500),
+  'max_iter': 35000,  ## num_epoch:max_iter// [(len(dataset) // batch_size)]  []:iterations
+  ```
+  
   ## 4. Training
   batch size=8 (default)
       python train.py --config=yolact_plus_base_config
