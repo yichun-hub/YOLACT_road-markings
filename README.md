@@ -8,6 +8,7 @@
   * pytorch 1.7.1
   * torchvision 0.8.2
   * python 3.7
+  
   YOLACT++ please compile DCNv2
       cd external/DCNv2
       python setup.py build develop
