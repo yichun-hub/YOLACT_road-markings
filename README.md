@@ -21,30 +21,32 @@
   * modify class names
   * modify label map to match the coco class ids
 
-      dataset_base = Config({
-      'name': 'My Dataset',
+  '''python
+  dataset_base = Config({
+  'name': 'My Dataset',
 
-      # Training images and annotations
-      'train_images': '/home/user/Datasets/data/my_dataset/train_front_2data/JPEGImages',
-      'train_info':   '/home/user/Datasets/data/my_dataset/train_front_2data/annotations.json',
+  # Training images and annotations
+  'train_images': '/home/user/Datasets/data/my_dataset/train_front_2data/JPEGImages',
+  'train_info':   '/home/user/Datasets/data/my_dataset/train_front_2data/annotations.json',
 
-      # Validation images and annotations.
-      'valid_images': '/home/user/Datasets/data/my_dataset/val_front_2data/JPEGImages',
-      'valid_info':   '/home/user/Datasets/data/my_dataset/val_front_2data/annotations.json',
+  # Validation images and annotations.
+  'valid_images': '/home/user/Datasets/data/my_dataset/val_front_2data/JPEGImages',
+  'valid_info':   '/home/user/Datasets/data/my_dataset/val_front_2data/annotations.json',
 
-      # Whether or not to load GT. If this is False, eval.py quantitative evaluation won't work.
-      'has_gt': True,
+  # Whether or not to load GT. If this is False, eval.py quantitative evaluation won't work.
+  'has_gt': True,
 
-      # A list of names for each of you classes.
-      'class_names': ('straight arrow', 'left arrow', 
-      'right arrow', 'straight left arrow', 'straight right arrow', 
-      'pedestrian crossing', 'special lane'),
+  # A list of names for each of you classes.
+  'class_names': ('straight arrow', 'left arrow', 
+  'right arrow', 'straight left arrow', 'straight right arrow', 
+  'pedestrian crossing', 'special lane'),
 
-      # COCO class ids aren't sequential, so this is a bandage fix. If your ids aren't sequential,
-      # provide a map from category_id -> index in class_names + 1 (the +1 is there because it's 1-indexed).
-      # If not specified, this just assumes category ids start at 1 and increase sequentially.
-      'label_map': {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7}
-      })
+  # COCO class ids aren't sequential, so this is a bandage fix. If your ids aren't sequential,
+  # provide a map from category_id -> index in class_names + 1 (the +1 is there because it's 1-indexed).
+  # If not specified, this just assumes category ids start at 1 and increase sequentially.
+  'label_map': {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7}
+  })
+  '''
 
   * modify num_classes (classes number + background)
   * modify training parameter
