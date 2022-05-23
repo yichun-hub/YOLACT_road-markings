@@ -16,6 +16,10 @@
       
   !! for the version of pytorch 1.7.0 ↑ , please download https://github.com/MatthewHowe/DCNv2
   ## 3. Modify Congig.py
+  * project name: My Dataset
+  * modify train/ val images and annotations path
+  * modify class names
+  * modify label map to match the coco class ids
       dataset_base = Config({
     'name': 'My Dataset',
 
@@ -40,3 +44,31 @@
     # If not specified, this just assumes category ids start at 1 and increase sequentially.
     'label_map': {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7}
     })
+
+  * modify num_classes (classes number + background)
+  * modify training parameter
+  * num_epoch: max_iter// [(len(dataset) // batch_size)]
+  * iterations per epoch: len(dataset) // batch_size
+    yolact_base_config = coco_base_config.copy({
+    'name': 'yolact_base',
+
+    # Dataset stuff
+    'dataset': dataset_base,
+    'num_classes': 7 + 1,
+
+    # Image Size
+    'max_size': 700, 
+    
+    # Training params
+    'lr_steps': (2800, 6000, 7000, 7500),
+    'max_iter': 35000,  ## num_epoch:max_iter// [(len(dataset) // batch_size)]  []:iterations
+    
+  ## 4. Training
+  batch size=8 (default)
+      python train.py --config=yolact_plus_base_config
+      
+  ## 5. Evaluation
+      python eval.py --trained_model=weights/yolact_plus_base_100_35000.pth
+      
+  ## 6. Visulization
+      python eval.py --trained_model=weights/yolact_plus_base_100_35000.pth --score_threshold=0.15 --top_k=15 --images=/home/user/Datasets/data/my_dataset       /TW_homo/JPEGImages:/mnt/disk/Chun/yolact/output/TW_homo
