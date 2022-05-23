@@ -10,8 +10,10 @@
   * python 3.7
   
   YOLACT++ please compile DCNv2
+  
       cd external/DCNv2
       python setup.py build develop
+      
   !! for the version of pytorch 1.7.0 ↑ , please download https://github.com/MatthewHowe/DCNv2
   ## 3. Modify Congig.py
       dataset_base = Config({
