@@ -21,7 +21,7 @@
   * modify class names
   * modify label map to match the coco class ids
 
-  '''python
+  ```python
   dataset_base = Config({
   'name': 'My Dataset',
 
@@ -46,7 +46,7 @@
   # If not specified, this just assumes category ids start at 1 and increase sequentially.
   'label_map': {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7}
   })
-  '''
+  ```
 
   * modify num_classes (classes number + background)
   * modify training parameter
