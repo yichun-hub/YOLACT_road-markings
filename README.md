@@ -49,8 +49,8 @@
   ```
 
   * modify num_classes (classes number + background)
-  * modify training parameter
-  * num_epoch: max_iter// [(len(dataset) // batch_size)]
+  * modify training parameters
+  * num_epoch: max_iter // [(len(dataset) // batch_size)]
   * iterations per epoch: len(dataset) // batch_size
   ```python 
   yolact_base_config = coco_base_config.copy({
@@ -70,6 +70,7 @@
   
   ## 4. Training
   batch size=8 (default)
+  
       python train.py --config=yolact_plus_base_config
       
   ## 5. Evaluation
