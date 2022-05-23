@@ -1,8 +1,8 @@
 # YOLACT++_road-markings
   ## 1. Converts the format of VGG Image Annotator (VIA) to the COCO format.
-  classes:straight arrow, left arrow, right arrow, straight left arrow, straight right arrow,  pedestrian crossing, special lane
+  Classes:straight arrow, left arrow, right arrow, straight left arrow, straight right arrow,  pedestrian crossing, special lane
   ## 2. YOLACT++ environment
-  * Operating System: Ubuntu
+  * Operating System: Ubuntu 20.04.4
   * GPU: NVIDIA GeForce RTX3090
   * CUDA 11.0
   * pytorch 1.7.1
