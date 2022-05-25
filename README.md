@@ -78,3 +78,12 @@
       
   ## 6. Visulization
       python eval.py --trained_model=weights/yolact_plus_base_100_35000.pth --score_threshold=0.15 --top_k=15 --images=/home/user/Datasets/data/my_dataset       /TW_homo/JPEGImages:/mnt/disk/Chun/yolact/output/TW_homo
+      
+  ## 7. Result
+  Train with the bird's eye view image model 
+  
+  Front View
+  ![image](https://github.com/yichun-hub/YOLACT_road-markings/blob/main/result/TW_125.png)
+  
+  Bird's eye view
+  ![image](https://github.com/yichun-hub/YOLACT_road-markings/blob/main/result/homo_TW_125.png)
